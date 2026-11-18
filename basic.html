@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Assignment 4 - Basic</title>
+  <style>
+* { box-sizing: border-box; }
+body { font-family: Arial, Helvetica, sans-serif; background: #f3f4f6; color: #1f2937; margin: 0; line-height: 1.5; }
+.page-header { background: #0f766e; color: #fff; text-align: center; padding: 22px 16px; }
+.page-header h1 { margin: 0 0 4px; }
+.page-header p { margin: 0; }
+.nav { text-align: center; padding: 10px; background: #ccfbf1; }
+.nav a { color: #0f766e; font-weight: 700; text-decoration: none; margin: 0 8px; }
+.container { max-width: 900px; margin: 0 auto; padding: 16px; }
+.q { background: #fff; border-radius: 8px; padding: 16px 20px; margin: 18px 0; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+.q > h3 { margin: 0 0 12px; font-size: 1rem; color: #0f766e; }
+.demo { border: 2px dashed #99f6e4; border-radius: 6px; padding: 12px; }
+.demo header, .demo footer { background: #134e4a; color: #fff; padding: 10px 14px; border-radius: 4px; }
+.demo header h1, .demo header h2 { margin: 0; font-size: 1.2rem; }
+.demo footer { margin-top: 10px; font-size: .9rem; }
+.demo nav { background: #e2e8f0; padding: 8px 12px; border-radius: 4px; margin: 8px 0; }
+.demo nav a { color: #0f766e; margin-right: 14px; font-weight: 600; text-decoration: none; }
+.demo nav.horizontal ul { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; }
+.demo main { padding: 8px 4px; }
+.demo aside { background: #fef3c7; padding: 10px 14px; border-radius: 4px; }
+.demo article { background: #f8fafc; border: 1px solid #e2e8f0; padding: 10px 14px; border-radius: 4px; margin: 8px 0; }
+.demo section { margin: 8px 0; }
+.demo figure { margin: 8px 0; display: inline-block; text-align: center; }
+.demo figure img { width: 220px; max-width: 100%; border-radius: 4px; display: block; }
+.demo figcaption { font-size: .85rem; color: #475569; }
+.demo address { font-style: normal; background: #f1f5f9; padding: 8px 12px; border-radius: 4px; }
+.layout { display: grid; grid-template-columns: 2fr 1fr; gap: 10px; }
+.layout > header, .layout > nav, .layout > footer { grid-column: 1 / -1; }
+.gallery { display: flex; flex-wrap: wrap; gap: 14px; }
+.gallery figure img { width: 160px; }
+.newspaper { display: grid; grid-template-columns: 2fr 1fr; gap: 10px; }
+.newspaper .lead { grid-column: 1 / -1; }
+.columns { column-count: 2; column-gap: 20px; }
+canvas { max-width: 100%; background: #fff; }
+.bordered { border: 3px solid #0f766e; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.stat { background: #ccfbf1; border-radius: 6px; padding: 10px; text-align: center; }
+.stat strong { display: block; font-size: 1.4rem; }
+.note { font-size: .85rem; color: #6b7280; }
+@media (max-width: 640px) { .layout, .newspaper, .stats { grid-template-columns: 1fr; } .columns { column-count: 1; } }
+  </style>
+</head>
+<body>
+  <div class="page-header">
+    <h1>HTML Assignment – 4</h1>
+    <p>Topic: HTML5 – Basic Questions (Q1–Q20)</p>
+  </div>
+  <div class="nav"><a href="basic.html">Basic</a> | <a href="intermediate.html">Intermediate</a> | <a href="advanced.html">Advanced</a></div>
+
+  <div class="container">
+
+    <section class="q">
+      <h3>Q1. Simple webpage with &lt;header&gt; and &lt;footer&gt;</h3>
+      <div class="demo">
+<header><h2>My Webpage</h2></header>
+<p>Some page content goes here.</p>
+<footer>&copy; 2026 My Webpage</footer>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q2. Website title inside &lt;header&gt;</h3>
+      <div class="demo">
+<header><h1>Vishwajeet's Learning Website</h1></header>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q3. &lt;nav&gt; with 3 links: Home, About, Contact</h3>
+      <div class="demo">
+<nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+</nav>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q4. Paragraph inside &lt;main&gt;</h3>
+      <div class="demo">
+<main>
+  <p>HTML5 introduced semantic elements such as header, main, section and footer, which describe the meaning of the content they hold.</p>
+</main>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q5. &lt;section&gt; for two different topics</h3>
+      <div class="demo">
+<section>
+  <h3>Topic 1: HTML</h3>
+  <p>HTML is the standard markup language used to create web pages.</p>
+</section>
+<section>
+  <h3>Topic 2: CSS</h3>
+  <p>CSS is used to style and lay out web pages.</p>
+</section>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q6. &lt;article&gt; as a blog post</h3>
+      <div class="demo">
+<article>
+  <h3>Why Learn HTML5?</h3>
+  <p>HTML5 is the foundation of every website. Learning it first makes CSS and JavaScript much easier to understand.</p>
+</article>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q7. &lt;aside&gt; showing related links</h3>
+      <div class="demo">
+<aside>
+  <h4>Related Links</h4>
+  <ul>
+    <li><a href="#">HTML Basics</a></li>
+    <li><a href="#">CSS Basics</a></li>
+    <li><a href="#">JavaScript Basics</a></li>
+  </ul>
+</aside>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q8. Image inside &lt;figure&gt; with &lt;figcaption&gt;</h3>
+      <div class="demo">
+<figure>
+  <img src="images/nature.svg" alt="Green hills under a blue sky">
+  <figcaption>Fig 1: Green hills under a blue sky</figcaption>
+</figure>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q9. &lt;time&gt; tag for today's date in an event description</h3>
+      <div class="demo">
+<p>The workshop will be held on <time id="q9time" datetime="2026-11-18">18 November 2026</time>.</p>
+<p class="note">Today's date (set by JavaScript): <time id="q9today"></time></p>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q10. Contact info using &lt;address&gt;</h3>
+      <div class="demo">
+<address>
+  Vishwajeet Jadhav<br>
+  IMED, Pune, Maharashtra, India<br>
+  Email: <a href="mailto:student@example.com">student@example.com</a><br>
+  Phone: <a href="tel:+910000000000">+91 00000 00000</a>
+</address>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q11. Layout with &lt;header&gt;, &lt;main&gt;, &lt;footer&gt;</h3>
+      <div class="demo">
+<header><h2>My Site</h2></header>
+<main>
+  <p>This is the main content area of the page.</p>
+</main>
+<footer>&copy; 2026 My Site</footer>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q12. &lt;nav&gt; with links displayed horizontally</h3>
+      <div class="demo">
+<nav class="horizontal">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Courses</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q13. Publication date of an article using &lt;time&gt;</h3>
+      <div class="demo">
+<article>
+  <h3>Introduction to Semantic HTML</h3>
+  <p>Published on <time datetime="2026-08-20">20 August 2026</time></p>
+  <p>Semantic tags make code easier to read and better for search engines.</p>
+</article>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q14. Simple blog page with one &lt;article&gt; inside &lt;main&gt;</h3>
+      <div class="demo">
+<main>
+  <article>
+    <h3>My First Blog Post</h3>
+    <p>Today I learned how to structure a webpage using HTML5 semantic elements.</p>
+  </article>
+</main>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q15. Two images with captions using &lt;figure&gt; and &lt;figcaption&gt;</h3>
+      <div class="demo">
+<figure>
+  <img src="images/mountain.svg" alt="Mountains at sunrise">
+  <figcaption>Fig 1: Mountains at sunrise</figcaption>
+</figure>
+<figure>
+  <img src="images/sea.svg" alt="A calm sea">
+  <figcaption>Fig 2: A calm sea</figcaption>
+</figure>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q16. Developer's email address using &lt;address&gt;</h3>
+      <div class="demo">
+<address>
+  Developer: <a href="mailto:developer@example.com">developer@example.com</a>
+</address>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q17. Rectangle using inline &lt;svg&gt;</h3>
+      <div class="demo">
+<svg width="220" height="120" xmlns="http://www.w3.org/2000/svg">
+  <rect x="20" y="20" width="180" height="80" fill="orange" stroke="black" stroke-width="3"/>
+</svg>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q18. Circle using &lt;svg&gt;</h3>
+      <div class="demo">
+<svg width="140" height="140" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="70" cy="70" r="50" fill="tomato" stroke="black" stroke-width="3"/>
+</svg>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q19. Line using SVG between two points</h3>
+      <div class="demo">
+<svg width="220" height="120" xmlns="http://www.w3.org/2000/svg">
+  <line x1="20" y1="20" x2="200" y2="100" stroke="purple" stroke-width="4"/>
+</svg>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q20. Simple &lt;canvas&gt; with a border</h3>
+      <div class="demo">
+<canvas class="bordered" width="300" height="150"></canvas>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+document.getElementById('q9today').textContent = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+document.getElementById('q9today').setAttribute('datetime', new Date().toISOString().split('T')[0]);
+  </script>
+</body>
+</html>

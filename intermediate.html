@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Assignment 4 - Intermediate</title>
+  <style>
+* { box-sizing: border-box; }
+body { font-family: Arial, Helvetica, sans-serif; background: #f3f4f6; color: #1f2937; margin: 0; line-height: 1.5; }
+.page-header { background: #0f766e; color: #fff; text-align: center; padding: 22px 16px; }
+.page-header h1 { margin: 0 0 4px; }
+.page-header p { margin: 0; }
+.nav { text-align: center; padding: 10px; background: #ccfbf1; }
+.nav a { color: #0f766e; font-weight: 700; text-decoration: none; margin: 0 8px; }
+.container { max-width: 900px; margin: 0 auto; padding: 16px; }
+.q { background: #fff; border-radius: 8px; padding: 16px 20px; margin: 18px 0; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+.q > h3 { margin: 0 0 12px; font-size: 1rem; color: #0f766e; }
+.demo { border: 2px dashed #99f6e4; border-radius: 6px; padding: 12px; }
+.demo header, .demo footer { background: #134e4a; color: #fff; padding: 10px 14px; border-radius: 4px; }
+.demo header h1, .demo header h2 { margin: 0; font-size: 1.2rem; }
+.demo footer { margin-top: 10px; font-size: .9rem; }
+.demo nav { background: #e2e8f0; padding: 8px 12px; border-radius: 4px; margin: 8px 0; }
+.demo nav a { color: #0f766e; margin-right: 14px; font-weight: 600; text-decoration: none; }
+.demo nav.horizontal ul { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; }
+.demo main { padding: 8px 4px; }
+.demo aside { background: #fef3c7; padding: 10px 14px; border-radius: 4px; }
+.demo article { background: #f8fafc; border: 1px solid #e2e8f0; padding: 10px 14px; border-radius: 4px; margin: 8px 0; }
+.demo section { margin: 8px 0; }
+.demo figure { margin: 8px 0; display: inline-block; text-align: center; }
+.demo figure img { width: 220px; max-width: 100%; border-radius: 4px; display: block; }
+.demo figcaption { font-size: .85rem; color: #475569; }
+.demo address { font-style: normal; background: #f1f5f9; padding: 8px 12px; border-radius: 4px; }
+.layout { display: grid; grid-template-columns: 2fr 1fr; gap: 10px; }
+.layout > header, .layout > nav, .layout > footer { grid-column: 1 / -1; }
+.gallery { display: flex; flex-wrap: wrap; gap: 14px; }
+.gallery figure img { width: 160px; }
+.newspaper { display: grid; grid-template-columns: 2fr 1fr; gap: 10px; }
+.newspaper .lead { grid-column: 1 / -1; }
+.columns { column-count: 2; column-gap: 20px; }
+canvas { max-width: 100%; background: #fff; }
+.bordered { border: 3px solid #0f766e; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.stat { background: #ccfbf1; border-radius: 6px; padding: 10px; text-align: center; }
+.stat strong { display: block; font-size: 1.4rem; }
+.note { font-size: .85rem; color: #6b7280; }
+@media (max-width: 640px) { .layout, .newspaper, .stats { grid-template-columns: 1fr; } .columns { column-count: 1; } }
+  </style>
+</head>
+<body>
+  <div class="page-header">
+    <h1>HTML Assignment – 4</h1>
+    <p>Topic: HTML5 – Intermediate Questions (Q21–Q40)</p>
+  </div>
+  <div class="nav"><a href="basic.html">Basic</a> | <a href="intermediate.html">Intermediate</a> | <a href="advanced.html">Advanced</a></div>
+
+  <div class="container">
+
+    <section class="q">
+      <h3>Q21. Layout with &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;aside&gt;, &lt;footer&gt;</h3>
+      <div class="demo">
+<div class="layout">
+  <header><h2>My Website</h2></header>
+  <nav><a href="#">Home</a> <a href="#">About</a> <a href="#">Contact</a></nav>
+  <main><p>Main content of the page is shown here.</p></main>
+  <aside><p>Sidebar content: ads, links or notes.</p></aside>
+  <footer>&copy; 2026 My Website</footer>
+</div>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q22. Multiple &lt;section&gt; elements under &lt;main&gt; (categories)</h3>
+      <div class="demo">
+<main>
+  <section><h3>Technology</h3><p>Latest news about gadgets, software and the internet.</p></section>
+  <section><h3>Sports</h3><p>Scores, match reports and player updates.</p></section>
+  <section><h3>Education</h3><p>Exam results, courses and career guidance.</p></section>
+</main>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q23. Blog post with &lt;article&gt; and author info in &lt;address&gt;</h3>
+      <div class="demo">
+<article>
+  <h3>Getting Started with Web Development</h3>
+  <p>Start with HTML, then CSS, and finally JavaScript.</p>
+  <address>
+    Written by <strong>Vishwajeet Jadhav</strong><br>
+    <a href="mailto:author@example.com">author@example.com</a>
+  </address>
+</article>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q24. &lt;header&gt; for navigation and &lt;footer&gt; for copyright</h3>
+      <div class="demo">
+<header>
+  <nav style="background:transparent;margin:0;padding:0">
+    <a href="#" style="color:#fff">Home</a>
+    <a href="#" style="color:#fff">Services</a>
+    <a href="#" style="color:#fff">Contact</a>
+  </nav>
+</header>
+<p>Page content goes here.</p>
+<footer>&copy; 2026 Vishwajeet Jadhav. All rights reserved.</footer>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q25. Two &lt;article&gt; blog posts inside &lt;main&gt;</h3>
+      <div class="demo">
+<main>
+  <article><h3>Post 1: What is HTML5?</h3><p>HTML5 is the latest version of HTML with new semantic tags, audio, video, canvas and SVG.</p></article>
+  <article><h3>Post 2: Why Semantic Tags?</h3><p>They give meaning to the page structure and improve accessibility.</p></article>
+</main>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q26. Blog page with an &lt;aside&gt; of related articles</h3>
+      <div class="demo">
+<div class="layout">
+  <main><article><h3>Learning HTML5</h3><p>HTML5 makes it easy to build structured pages.</p></article></main>
+  <aside>
+    <h4>Related Articles</h4>
+    <ul><li><a href="#">CSS Flexbox Guide</a></li><li><a href="#">JavaScript for Beginners</a></li><li><a href="#">Responsive Design</a></li></ul>
+  </aside>
+</div>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q27. Image with title using &lt;figure&gt; and &lt;figcaption&gt; inside &lt;section&gt;</h3>
+      <div class="demo">
+<section>
+  <h3>Photo of the Day</h3>
+  <figure>
+    <img src="images/city.svg" alt="City skyline at dusk">
+    <figcaption>City skyline at dusk</figcaption>
+  </figure>
+</section>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q28. &lt;time&gt; for date and time of an event</h3>
+      <div class="demo">
+<p>Published on <time datetime="2025-08-20T17:00">20 August 2025, 5:00 PM</time></p>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q29. Company contact page using &lt;address&gt;</h3>
+      <div class="demo">
+<h3>Contact Us – TechNova Pvt. Ltd.</h3>
+<address>
+  <strong>Location:</strong> 5th Floor, Tech Park, Baner Road, Pune 411045<br>
+  <strong>Phone:</strong> <a href="tel:+910000000000">+91 00000 00000</a><br>
+  <strong>Email:</strong> <a href="mailto:contact@technova.example">contact@technova.example</a>
+</address>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q30. Magazine-like layout using &lt;section&gt; and &lt;article&gt;</h3>
+      <div class="demo">
+<section>
+  <h3>Cover Story</h3>
+  <article><h4>The Rise of Artificial Intelligence</h4><p>AI is changing how we study, work and create.</p></article>
+</section>
+<section>
+  <h3>Lifestyle</h3>
+  <article><h4>Healthy Habits for Students</h4><p>Sleep, exercise and planning help you perform better.</p></article>
+  <article><h4>Budget Travel Tips</h4><p>Plan early and travel light to save money.</p></article>
+</section>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q31. Blue rectangle inside an SVG</h3>
+      <div class="demo">
+<svg width="220" height="120" xmlns="http://www.w3.org/2000/svg">
+  <rect x="20" y="20" width="180" height="80" fill="blue"/>
+</svg>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q32. SVG with both a circle and a rectangle</h3>
+      <div class="demo">
+<svg width="320" height="130" xmlns="http://www.w3.org/2000/svg">
+  <rect x="20" y="25" width="120" height="80" fill="teal"/>
+  <circle cx="230" cy="65" r="45" fill="crimson"/>
+</svg>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q33. Triangle using &lt;polygon&gt; in SVG</h3>
+      <div class="demo">
+<svg width="220" height="140" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="110,15 200,125 20,125" fill="gold" stroke="black" stroke-width="3"/>
+</svg>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q34. Inline SVG with a line connecting two circles</h3>
+      <div class="demo">
+<svg width="320" height="120" xmlns="http://www.w3.org/2000/svg">
+  <line x1="60" y1="60" x2="260" y2="60" stroke="black" stroke-width="4"/>
+  <circle cx="60" cy="60" r="30" fill="dodgerblue"/>
+  <circle cx="260" cy="60" r="30" fill="tomato"/>
+</svg>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q35. Canvas with a red filled rectangle</h3>
+      <div class="demo">
+<canvas id="c35" class="bordered" width="300" height="150"></canvas>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q36. Diagonal line on canvas (top-left to bottom-right)</h3>
+      <div class="demo">
+<canvas id="c36" class="bordered" width="300" height="150"></canvas>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q37. Filled blue circle on canvas</h3>
+      <div class="demo">
+<canvas id="c37" class="bordered" width="300" height="150"></canvas>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q38. Multiple shapes (circle, rectangle, line) inside one canvas</h3>
+      <div class="demo">
+<canvas id="c38" class="bordered" width="360" height="160"></canvas>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q39. SVG ellipse styled with fill="green"</h3>
+      <div class="demo">
+<svg width="260" height="140" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="130" cy="70" rx="100" ry="50" fill="green"/>
+</svg>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q40. &lt;header&gt;, &lt;main&gt;, &lt;aside&gt;, &lt;footer&gt; plus an inline SVG below main</h3>
+      <div class="demo">
+<header><h2>Shapes Gallery</h2></header>
+<div class="layout">
+  <main>
+    <p>The SVG graphic is placed below the main content.</p>
+  </main>
+  <aside><p>Aside: SVG stands for Scalable Vector Graphics.</p></aside>
+</div>
+<svg width="300" height="100" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="80" height="80" fill="orange"/>
+  <circle cx="150" cy="50" r="40" fill="purple"/>
+  <polygon points="260,10 290,90 230,90" fill="seagreen"/>
+</svg>
+<footer>&copy; 2026 Shapes Gallery</footer>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+
+    // Q35: red filled rectangle
+    var c = document.getElementById('c35').getContext('2d');
+    c.fillStyle = 'red';
+    c.fillRect(40, 30, 200, 90);
+
+    // Q36: diagonal line, top-left to bottom-right
+    var c2 = document.getElementById('c36');
+    var x2 = c2.getContext('2d');
+    x2.beginPath();
+    x2.moveTo(0, 0);
+    x2.lineTo(c2.width, c2.height);
+    x2.lineWidth = 3;
+    x2.strokeStyle = 'black';
+    x2.stroke();
+
+    // Q37: filled blue circle
+    var x3 = document.getElementById('c37').getContext('2d');
+    x3.beginPath();
+    x3.arc(150, 75, 55, 0, 2 * Math.PI);
+    x3.fillStyle = 'blue';
+    x3.fill();
+
+    // Q38: circle, rectangle and line in a single canvas
+    var x4 = document.getElementById('c38').getContext('2d');
+    x4.fillStyle = 'orange';
+    x4.fillRect(20, 30, 100, 80);
+    x4.beginPath();
+    x4.arc(220, 70, 40, 0, 2 * Math.PI);
+    x4.fillStyle = 'purple';
+    x4.fill();
+    x4.beginPath();
+    x4.moveTo(20, 140);
+    x4.lineTo(340, 140);
+    x4.lineWidth = 4;
+    x4.strokeStyle = 'green';
+    x4.stroke();
+  </script>
+</body>
+</html>

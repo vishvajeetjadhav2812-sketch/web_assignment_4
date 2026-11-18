@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Assignment 4 - Advanced</title>
+  <style>
+* { box-sizing: border-box; }
+body { font-family: Arial, Helvetica, sans-serif; background: #f3f4f6; color: #1f2937; margin: 0; line-height: 1.5; }
+.page-header { background: #0f766e; color: #fff; text-align: center; padding: 22px 16px; }
+.page-header h1 { margin: 0 0 4px; }
+.page-header p { margin: 0; }
+.nav { text-align: center; padding: 10px; background: #ccfbf1; }
+.nav a { color: #0f766e; font-weight: 700; text-decoration: none; margin: 0 8px; }
+.container { max-width: 900px; margin: 0 auto; padding: 16px; }
+.q { background: #fff; border-radius: 8px; padding: 16px 20px; margin: 18px 0; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+.q > h3 { margin: 0 0 12px; font-size: 1rem; color: #0f766e; }
+.demo { border: 2px dashed #99f6e4; border-radius: 6px; padding: 12px; }
+.demo header, .demo footer { background: #134e4a; color: #fff; padding: 10px 14px; border-radius: 4px; }
+.demo header h1, .demo header h2 { margin: 0; font-size: 1.2rem; }
+.demo footer { margin-top: 10px; font-size: .9rem; }
+.demo nav { background: #e2e8f0; padding: 8px 12px; border-radius: 4px; margin: 8px 0; }
+.demo nav a { color: #0f766e; margin-right: 14px; font-weight: 600; text-decoration: none; }
+.demo nav.horizontal ul { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; }
+.demo main { padding: 8px 4px; }
+.demo aside { background: #fef3c7; padding: 10px 14px; border-radius: 4px; }
+.demo article { background: #f8fafc; border: 1px solid #e2e8f0; padding: 10px 14px; border-radius: 4px; margin: 8px 0; }
+.demo section { margin: 8px 0; }
+.demo figure { margin: 8px 0; display: inline-block; text-align: center; }
+.demo figure img { width: 220px; max-width: 100%; border-radius: 4px; display: block; }
+.demo figcaption { font-size: .85rem; color: #475569; }
+.demo address { font-style: normal; background: #f1f5f9; padding: 8px 12px; border-radius: 4px; }
+.layout { display: grid; grid-template-columns: 2fr 1fr; gap: 10px; }
+.layout > header, .layout > nav, .layout > footer { grid-column: 1 / -1; }
+.gallery { display: flex; flex-wrap: wrap; gap: 14px; }
+.gallery figure img { width: 160px; }
+.newspaper { display: grid; grid-template-columns: 2fr 1fr; gap: 10px; }
+.newspaper .lead { grid-column: 1 / -1; }
+.columns { column-count: 2; column-gap: 20px; }
+canvas { max-width: 100%; background: #fff; }
+.bordered { border: 3px solid #0f766e; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.stat { background: #ccfbf1; border-radius: 6px; padding: 10px; text-align: center; }
+.stat strong { display: block; font-size: 1.4rem; }
+.note { font-size: .85rem; color: #6b7280; }
+@media (max-width: 640px) { .layout, .newspaper, .stats { grid-template-columns: 1fr; } .columns { column-count: 1; } }
+  </style>
+</head>
+<body>
+  <div class="page-header">
+    <h1>HTML Assignment – 4</h1>
+    <p>Topic: HTML5 – Advanced Questions (Q41–Q50)</p>
+  </div>
+  <div class="nav"><a href="basic.html">Basic</a> | <a href="intermediate.html">Intermediate</a> | <a href="advanced.html">Advanced</a></div>
+
+  <div class="container">
+
+    <section class="q">
+      <h3>Q41. Complete semantic webpage layout with demo content</h3>
+      <div class="demo">
+<div class="layout">
+  <header><h2>Campus Daily</h2></header>
+  <nav><a href="#">Home</a> <a href="#">News</a> <a href="#">Events</a> <a href="#">Contact</a></nav>
+  <main>
+    <article>
+      <h3>Annual Tech Fest Announced</h3>
+      <p>The annual technical festival will feature coding contests, project exhibitions and guest lectures from industry experts. Students from all departments are invited to participate.</p>
+      <p>Registrations are open until the end of the month.</p>
+    </article>
+  </main>
+  <aside>
+    <h4>Quick Links</h4>
+    <ul><li><a href="#">Time Table</a></li><li><a href="#">Results</a></li><li><a href="#">Library</a></li></ul>
+  </aside>
+  <footer>&copy; 2026 Campus Daily. All rights reserved.</footer>
+</div>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q42. Blog with 3 &lt;article&gt; posts, each with &lt;time&gt; and &lt;address&gt;</h3>
+      <div class="demo">
+<main><article>
+  <h3>Learning HTML5</h3>
+  <p>Published on <time datetime="2026-09-05">5 September 2026</time></p>
+  <p>HTML5 adds semantic tags that make pages easier to understand.</p>
+  <address>Author: Amit Patil, <a href="mailto:amit@example.com">amit@example.com</a></address>
+</article><article>
+  <h3>Styling with CSS</h3>
+  <p>Published on <time datetime="2026-09-12">12 September 2026</time></p>
+  <p>CSS controls colours, spacing and layout of a webpage.</p>
+  <address>Author: Neha Kulkarni, <a href="mailto:neha@example.com">neha@example.com</a></address>
+</article><article>
+  <h3>JavaScript Basics</h3>
+  <p>Published on <time datetime="2026-09-19">19 September 2026</time></p>
+  <p>JavaScript adds interactivity such as animations and form checks.</p>
+  <address>Author: Rahul Deshmukh, <a href="mailto:rahul@example.com">rahul@example.com</a></address>
+</article></main>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q43. Mini photo gallery using &lt;figure&gt; thumbnails with captions</h3>
+      <div class="demo">
+<div class="gallery">
+  <figure>
+    <img src="images/nature.svg" alt="Green Hills">
+    <figcaption>Green Hills</figcaption>
+  </figure>
+  <figure>
+    <img src="images/mountain.svg" alt="Mountain Sunrise">
+    <figcaption>Mountain Sunrise</figcaption>
+  </figure>
+  <figure>
+    <img src="images/sea.svg" alt="Calm Sea">
+    <figcaption>Calm Sea</figcaption>
+  </figure>
+  <figure>
+    <img src="images/city.svg" alt="City at Dusk">
+    <figcaption>City at Dusk</figcaption>
+  </figure></div>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q44. Newspaper layout using &lt;section&gt;, &lt;article&gt; and &lt;aside&gt;</h3>
+      <div class="demo">
+<header><h2>The Daily Pune</h2></header>
+<div class="newspaper">
+  <section class="lead">
+    <article>
+      <h3>City Launches New Metro Line</h3>
+      <p>The new metro line will cut travel time across the city and is expected to serve thousands of commuters every day.</p>
+    </article>
+  </section>
+  <section>
+    <article><h4>Sports: Local Team Wins Final</h4><p>The home team won the championship after a thrilling last-over finish.</p></article>
+    <article><h4>Business: Markets Close Higher</h4><p>Technology stocks led the gains on Tuesday.</p></article>
+  </section>
+  <aside>
+    <h4>Weather</h4>
+    <p>Sunny, 29&deg;C</p>
+    <h4>Today's Quote</h4>
+    <p><em>"Practice makes perfect."</em></p>
+  </aside>
+</div>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q45. Sunset scene in SVG (sun, ground, rays)</h3>
+      <div class="demo">
+<svg width="360" height="220" viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg">
+  <rect width="360" height="220" fill="#ff9966"/>
+  <!-- rays -->
+  <g stroke="#ffe066" stroke-width="4" stroke-linecap="round">
+    <line x1="180" y1="60" x2="180" y2="30"/>
+    <line x1="130" y1="80" x2="108" y2="58"/>
+    <line x1="230" y1="80" x2="252" y2="58"/>
+    <line x1="105" y1="115" x2="72" y2="105"/>
+    <line x1="255" y1="115" x2="288" y2="105"/>
+  </g>
+  <!-- sun -->
+  <circle cx="180" cy="140" r="55" fill="#ffd633"/>
+  <!-- ground -->
+  <rect x="0" y="150" width="360" height="70" fill="#3b7a3b"/>
+</svg>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q46. JavaScript to draw a house on canvas (rectangle, triangle roof, square window)</h3>
+      <div class="demo">
+<canvas id="c46" class="bordered" width="320" height="240"></canvas>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q47. Canvas with two rectangles filled with linear gradients</h3>
+      <div class="demo">
+<canvas id="c47" class="bordered" width="360" height="160"></canvas>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q48. Bouncing ball animation using canvas and JavaScript</h3>
+      <div class="demo">
+<canvas id="c48" class="bordered" width="360" height="200"></canvas>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q49. Semantic page with an inline SVG bar chart</h3>
+      <div class="demo">
+<header><h2>Marks Report</h2></header>
+<main>
+  <article>
+    <h3>Subject-wise Marks</h3>
+    <p>Bar chart drawn with SVG &lt;rect&gt; elements.</p>
+    <svg width="360" height="220" viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart of marks">
+      <line x1="30" y1="10" x2="30" y2="180" stroke="black"/>
+      <line x1="30" y1="180" x2="350" y2="180" stroke="black"/>
+      <rect x="50"  y="60"  width="45" height="120" fill="#0f766e"/>
+      <rect x="120" y="30"  width="45" height="150" fill="#2563eb"/>
+      <rect x="190" y="90"  width="45" height="90"  fill="#d97706"/>
+      <rect x="260" y="45"  width="45" height="135" fill="#7c3aed"/>
+      <g font-size="12" text-anchor="middle" fill="#111">
+        <text x="72"  y="198">HTML</text>
+        <text x="142" y="198">CSS</text>
+        <text x="212" y="198">JS</text>
+        <text x="282" y="198">SQL</text>
+        <text x="72"  y="54">80</text>
+        <text x="142" y="24">100</text>
+        <text x="212" y="84">60</text>
+        <text x="282" y="39">90</text>
+      </g>
+    </svg>
+  </article>
+</main>
+<footer>&copy; 2026 Marks Report</footer>
+      </div>
+    </section>
+
+    <section class="q">
+      <h3>Q50. Dashboard with semantic layout and an animated canvas graph</h3>
+      <div class="demo">
+<div class="layout">
+  <header><h2>Student Dashboard</h2></header>
+  <nav><a href="#">Overview</a> <a href="#">Reports</a> <a href="#">Settings</a></nav>
+  <main>
+    <div class="stats">
+      <div class="stat"><strong>120</strong>Students</div>
+      <div class="stat"><strong>8</strong>Courses</div>
+      <div class="stat"><strong>92%</strong>Attendance</div>
+    </div>
+    <h3>Weekly Activity (animated)</h3>
+    <canvas id="c50" class="bordered" width="460" height="200"></canvas>
+  </main>
+  <aside>
+    <h4>Notices</h4>
+    <ul><li>Exam form due Friday</li><li>Project demo on Monday</li></ul>
+  </aside>
+  <footer>&copy; 2026 Student Dashboard</footer>
+</div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+
+    // Q46: house on canvas
+    var h = document.getElementById('c46').getContext('2d');
+    h.fillStyle = '#e8c07d';           // house body (rectangle)
+    h.fillRect(80, 110, 160, 110);
+    h.fillStyle = '#b23a3a';           // roof (triangle)
+    h.beginPath();
+    h.moveTo(65, 110);
+    h.lineTo(160, 40);
+    h.lineTo(255, 110);
+    h.closePath();
+    h.fill();
+    h.fillStyle = '#7a4a21';           // door
+    h.fillRect(143, 160, 34, 60);
+    h.fillStyle = '#87ceeb';           // window (square)
+    h.fillRect(100, 130, 30, 30);
+    h.strokeStyle = '#333';
+    h.strokeRect(100, 130, 30, 30);
+
+    // Q47: two rectangles with linear gradients
+    var g = document.getElementById('c47').getContext('2d');
+    var g1 = g.createLinearGradient(20, 0, 170, 0);
+    g1.addColorStop(0, 'red');
+    g1.addColorStop(1, 'yellow');
+    g.fillStyle = g1;
+    g.fillRect(20, 20, 150, 120);
+    var g2 = g.createLinearGradient(0, 20, 0, 140);
+    g2.addColorStop(0, 'blue');
+    g2.addColorStop(1, 'lightgreen');
+    g.fillStyle = g2;
+    g.fillRect(190, 20, 150, 120);
+
+    // Q48: bouncing ball
+    var cv = document.getElementById('c48');
+    var b = cv.getContext('2d');
+    var x = 60, y = 50, dx = 3, dy = 2.5, r = 18;
+    function bounce() {
+      b.clearRect(0, 0, cv.width, cv.height);
+      b.beginPath();
+      b.arc(x, y, r, 0, 2 * Math.PI);
+      b.fillStyle = 'crimson';
+      b.fill();
+      if (x + r > cv.width || x - r < 0) dx = -dx;
+      if (y + r > cv.height || y - r < 0) dy = -dy;
+      x += dx;
+      y += dy;
+      requestAnimationFrame(bounce);
+    }
+    bounce();
+
+    // Q50: animated canvas graph (bars grow, then loop)
+    var dc = document.getElementById('c50');
+    var d = dc.getContext('2d');
+    var data = [40, 65, 50, 85, 70, 95, 60];
+    var days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+    var progress = 0;
+    function drawGraph() {
+      d.clearRect(0, 0, dc.width, dc.height);
+      var bw = 40, gap = 20, base = 170;
+      for (var i = 0; i < data.length; i++) {
+        var hgt = data[i] * 1.5 * Math.min(progress, 1);
+        var bx = 25 + i * (bw + gap);
+        d.fillStyle = '#0f766e';
+        d.fillRect(bx, base - hgt, bw, hgt);
+        d.fillStyle = '#111';
+        d.font = '12px Arial';
+        d.fillText(days[i], bx + 8, 190);
+      }
+      d.strokeStyle = '#111';
+      d.beginPath();
+      d.moveTo(15, 10);
+      d.lineTo(15, base);
+      d.lineTo(dc.width - 10, base);
+      d.stroke();
+      progress += 0.02;
+      if (progress > 1.6) progress = 0;   // pause briefly then restart
+      requestAnimationFrame(drawGraph);
+    }
+    drawGraph();
+  </script>
+</body>
+</html>
